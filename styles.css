@@ -8,7 +8,7 @@ body {
   
   
   header {
-    background-color: #333;
+    background-color: #ff92db;
     color: #fff;
     padding: 20px;
     text-align: center;
@@ -94,7 +94,7 @@ input[type="submit"]:hover {
   }
   
   footer {
-    background-color: #333;
+    background-color: #ff92db;
     color: #fff;
     padding: 10px;
     text-align: center;
