@@ -9,7 +9,7 @@ body {
   font-family: 'Poppins', sans-serif;
   line-height: 1.6;
   color: #333;
-  background: linear-gradient(to bottom, #f8bbd0, #a1887f); /* Gradiente rosa e marrom */
+  background: linear-gradient(to bottom, #f8bbd0, #a1887f);
 }
 
 /* Cabeçalho */
@@ -17,7 +17,8 @@ header {
   background-color: rgba(255, 255, 255, 0.8);
   padding: 20px;
   display: flex;
-  justify-content: center; /* Centraliza a navegação */
+  justify-content: space-between;
+  align-items: center;
 }
 
 nav ul {
@@ -26,136 +27,167 @@ nav ul {
 }
 
 nav li {
-  margin: 0 15px; /* Reduz o espaçamento entre os itens */
+  margin: 0 15px;
 }
 
 nav a {
   text-decoration: none;
   color: #333;
-  font-weight: 600; /* Deixa o texto do menu mais forte */
-  transition: color 0.3s ease; /* Adiciona uma transição suave na cor */
+  font-weight: 600;
+  transition: color 0.3s ease;
 }
 
 nav a:hover {
-  color: #008000; /* Muda a cor ao passar o mouse */
+  color: #008000;
 }
 
 /* Seção Home */
 #home {
   text-align: center;
-  padding: 100px 20px;
+  padding: 150px 20px;
 }
 
 #home h1 {
-  font-size: 2.5em;
+  font-size: 3em;
   margin-bottom: 20px;
+  color: #5c3f2d; /* Marrom mais escuro para destaque */
 }
 
 #home p {
-  font-size: 1.2em;
-  margin-bottom: 30px;
+  font-size: 1.3em;
+  margin-bottom: 40px;
+  color: #4a4a4a;
 }
 
 #home button {
   background-color: #008000;
   color: white;
-  padding: 15px 30px;
+  padding: 15px 35px;
   border: none;
-  border-radius: 5px;
-  font-size: 1.1em;
+  border-radius: 8px;
+  font-size: 1.2em;
+  font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 #home button:hover {
-  background-color: #006400; /* Escurece o botão ao passar o mouse */
+  background-color: #006400;
+  transform: translateY(-3px); /* Leve efeito de elevação */
 }
 
 /* Seção Produtos */
 #produtos {
   text-align: center;
-  padding: 50px 20px;
+  padding: 80px 20px;
 }
 
 #produtos h2 {
-  font-size: 2em;
-  margin-bottom: 30px;
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  color: #5c3f2d;
 }
 
 #produtos ul {
   list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
 }
 
 #produtos li {
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 20px;
-  border-radius: 8px;
-  text-align: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  transition: transform 0.3s ease;
+}
+
+#produtos li:hover {
+  transform: translateY(-5px);
 }
 
 #produtos img {
   max-width: 100%;
   height: auto;
-  border-radius: 5px;
-  margin-bottom: 10px;
+  border-radius: 8px;
+  margin-bottom: 20px;
 }
 
 /* Seção Contato */
 #contato {
   text-align: center;
-  padding: 50px 20px;
+  padding: 80px 20px;
 }
 
 #contato h2 {
-  font-size: 2em;
-  margin-bottom: 30px;
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  color: #5c3f2d;
 }
 
 #contato p {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  font-size: 1.1em;
 }
 
 #contato a {
   color: #008000;
   text-decoration: none;
   font-weight: 600;
+  transition: color 0.3s ease;
 }
 
 #contato a:hover {
+  color: #006400;
   text-decoration: underline;
 }
 
 .insta {
   display: flex;
   justify-content: center;
+  margin-top: 20px;
 }
 
 /* Rodapé */
 footer {
-  background-color: rgba(51, 51, 51, 0.8);
+  background-color: rgba(51, 51, 51, 0.9);
   color: white;
   text-align: center;
-  padding: 20px;
-  font-size: 0.9em;
+  padding: 30px;
+  font-size: 1em;
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
   nav ul {
     flex-direction: column;
     align-items: center;
+    margin-top: 15px;
   }
 
   nav li {
     margin: 10px 0;
   }
 
+  #home {
+    padding: 100px 20px;
+  }
+
+  #home h1 {
+    font-size: 2.5em;
+  }
+
+  #home p {
+    font-size: 1.2em;
+  }
+
   #produtos ul {
-    flex-direction: column;
-    align-items: center;
+    grid-template-columns: 1fr;
   }
 }
