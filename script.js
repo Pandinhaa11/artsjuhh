@@ -1,10 +1,2 @@
-// Adicionar evento de clique ao botão "Saiba mais"
-document.querySelector('button').addEventListener('click', function() {
-    alert('Você clicou no botão!');
-  });
-  
-  // Adicionar evento de envio ao formulário de contato
-  document.querySelector('form').addEventListener('submit', function(event) {
-    event.preventDefault();
-    alert('Obrigado por entrar em contato!');
-  });
+// Você pode adicionar animações ou funcionalidades aqui futuramente
+console.log("Bem-vindo ao Ateliê Art's Juh!");
